@@ -30,16 +30,17 @@
     "build:esm": "rimraf es && cross-env BABEL_ENV=esm gulp build",
     "build:typed": "tsc --declaration --emitDeclarationOnly --noEmit false",
     "test": "mocha -r ts-node/register test/**/*.ts --timeout 300000",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "precommit": "build"
   },
   "dependencies": {
+    "@bitcoinerlab/secp256k1": "^1.0.5",
     "bignumber.js": "^9.1.2",
     "bip39": "^3.1.0",
     "bitcoinjs-lib": "^6.1.0",
     "bitcore-lib": "^10.0.0",
     "ecpair": "^2.1.0",
-    "hdkey": "^2.1.0",
-    "tiny-secp256k1": "=2.2.1"
+    "hdkey": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
