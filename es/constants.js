@@ -1,0 +1,1 @@
+export var UTXO_DUST = 546;
